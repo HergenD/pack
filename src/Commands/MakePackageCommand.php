@@ -52,7 +52,7 @@ class MakePackageCommand extends Command
         // Create tests directory
         $testsPath = "{$packagePath}/tests";
         if (! File::exists($testsPath)) {
-            File::makeDirectory($testsPath, $mode = 0777, true, true);
+            File::makeDirectory($testsPath, 0777, true, true);
         }
 
         // Modify root composer.json
@@ -85,11 +85,11 @@ class MakePackageCommand extends Command
 
         $this->info("Package {$packageName} created successfully");
 
-        // Prompt to update composer
-        if ($this->confirm('Do you wish to run composer update now?', true)) {
-            $this->info('Running composer update...');
+        // Prompt to install using composer
+        if ($this->confirm('Do you wish to install the package with composer now?', true)) {
+            $this->info("Running composer require packages/{$packageName}:@dev");
 
-            $process = new Process(['composer', 'update']);
+            $process = new Process(['composer', 'require', "packages/{$packageName}:@dev"]);
             $process->setWorkingDirectory(App::basePath());
 
             $process->run(function ($type, $buffer) {
