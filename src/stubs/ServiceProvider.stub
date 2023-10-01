@@ -1,0 +1,10 @@
+<?php declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use Illuminate\Support\ServiceProvider;
+
+class DummyClass extends ServiceProvider
+{
+
+}

@@ -1,0 +1,28 @@
+{
+    "name": "hergend/pack",
+    "description": "A tiny package generator for Laravel",
+    "type": "library",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "illuminate/support": ">=6.0",
+        "illuminate/console": ">=6.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "HergenD\\Pack\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hearlea\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "HergenD\\Pack\\PackServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "packages/dummy-package",
+    "description": "My package",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "DummyNamespace\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "DummyNamespace\\DummyClass"
+            ]
+        }
+    }
+}
