@@ -2,6 +2,7 @@
     "name": "hergend/pack",
     "description": "A tiny package generator for Laravel",
     "type": "library",
+    "license": "GPL-3.0-or-later",
     "require": {
         "php": "^7.4 || ^8.0",
         "illuminate/support": ">=6.0",
