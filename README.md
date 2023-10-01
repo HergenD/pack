@@ -3,8 +3,9 @@ Tiny package generator, only creating the most bare-bone folder structure
 for a new (local only) package. 
 
 ### Installation
+Install pack as a dev dependency:
 ```
-composer require hergend/pack
+composer require hergend/pack --dev
 ```
 
 ### Usage
