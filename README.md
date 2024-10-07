@@ -9,6 +9,7 @@ composer require hergend/pack --dev
 ```
 
 ### Usage
+!! Package names are `kebab-case`, so not `PascalCase`
 ```
 php artisan make:pack <package-name>
 ```
